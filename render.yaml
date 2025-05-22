@@ -3,11 +3,11 @@ services:
     name: n8n
     env: docker
     plan: free
+    repo: https://github.com/tuusuario/tu-repo
+    branch: main
     dockerfilePath: ./Dockerfile
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
-      - key: N8N_BASIC_AUTH_USER
-        value: admin
-      - key: N8N_BASIC_AUTH_PASSWORD
-        value: 987n8nadmin
+      # ⚠️ Usuario y contraseña se agregan en Render, no aquí
+    autoDeploy: true
